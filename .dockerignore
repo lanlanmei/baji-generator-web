@@ -1,0 +1,13 @@
+.git
+.vendor
+.data
+.pytest_cache
+**/__pycache__
+**/*.pyc
+acceptance
+acceptance-crop.png
+tests
+baji-generator-skill/tests
+baji-generator-skill/examples
+*.zip
+server.*.log

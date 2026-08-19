@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: baji-generator-web
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    maxShutdownDelaySeconds: 120
+    envVars:
+      - key: BAJI_WORKERS
+        value: "1"
+      - key: BAJI_JOB_TTL
+        value: "3600"
+      - key: BAJI_TEMP_DIR
+        value: /tmp/baji-jobs

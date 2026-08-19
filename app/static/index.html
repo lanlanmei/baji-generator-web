@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fff5f7"><title>吧唧生成器</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<main>
+  <section id="home" class="screen home active" aria-labelledby="home-title">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="spark s1">✦</div><div class="spark s2">✧</div>
+    <header class="brand"><span class="brand-dot">✿</span> 吧唧生成器 <small>BAJI MAKER</small></header>
+    <div class="hero-copy"><p class="eyebrow">把喜欢，变成可以收藏的形状</p><h1 id="home-title">你的图片，<br><em>下一秒变吧唧</em></h1><p>上传图片、挑选质感，马上收获会旋转的专属吧唧。</p></div>
+    <div class="hero-badge"><picture><source srcset="/assets/hero-baji.gif" type="image/gif"><img src="/assets/hero-baji.png" alt="旋转的吧唧成品示例"></picture><span class="orbit">58 mm</span></div>
+    <button id="start" class="primary hero-button">开始制作你的专属吧唧 <span>→</span></button>
+    <input id="file" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+    <p class="formats">PNG · JPG · WEBP · GIF</p>
+  </section>
+
+  <section id="crop" class="screen step" aria-labelledby="crop-title">
+    <header class="topbar"><button class="back" data-action="cancel" aria-label="取消并返回">←</button><div><small>STEP 01 / 03</small><h2 id="crop-title">裁出你的主角</h2></div><span></span></header>
+    <div class="crop-stage" id="cropStage"><canvas id="cropCanvas" width="1024" height="1024" aria-label="圆形图片裁切区"></canvas><div class="crop-ring" aria-hidden="true"></div></div>
+    <p class="hint">拖动图片调整位置 · 滑动缩放</p>
+    <label class="zoom-label">缩放 <input id="zoom" type="range" min="1" max="3" step="0.01" value="1"></label>
+    <div class="actions"><button class="secondary" data-action="cancel">取消</button><button id="cropConfirm" class="primary">确定</button></div>
+  </section>
+
+  <section id="styles" class="screen step styles" aria-labelledby="styles-title">
+    <header class="topbar"><button class="back" id="backCrop" aria-label="返回裁切">←</button><div><small>STEP 02 / 03</small><h2 id="styles-title">挑一个心动样式</h2></div><span></span></header>
+    <div class="style-layout"><aside class="mini-preview"><img id="cropPreview" alt="裁切预览"><p>你的图案</p></aside><div class="choices">
+      <fieldset><legend><b>01</b> 表面效果</legend><div id="effects" class="option-grid materials"></div></fieldset>
+      <fieldset><legend><b>02</b> 包边颜色</legend><div id="rims" class="option-grid rims"></div></fieldset>
+      <fieldset><legend><b>03</b> 背景颜色</legend><div id="backgrounds" class="option-grid backgrounds"></div></fieldset>
+    </div></div>
+    <div class="sticky-action"><button id="generate" class="primary">生成吧唧 <span>✦</span></button></div>
+  </section>
+
+  <section id="loading" class="screen centered" aria-live="polite"><div class="loader-badge"><img src="/assets/hero-baji.png" alt=""><i></i></div><p class="eyebrow">正在施展吧唧魔法</p><h2>正在制作你的吧唧……</h2><p>真实模型正在一帧帧旋转，请稍等片刻</p></section>
+
+  <section id="result" class="screen result centered" aria-labelledby="result-title">
+    <div class="confetti">✦　·　✿　·　✧</div><p class="eyebrow">YOUR BAJI IS READY!</p><h2 id="result-title">叮！你的吧唧做好啦</h2>
+    <div class="result-frame"><img id="resultGif" alt="实际生成的旋转吧唧"><button id="retryImage" hidden>重新加载</button></div>
+    <p id="resultCaption"></p><div class="actions"><button id="restart" class="secondary">重新制作</button><button id="export" class="primary">导出图片 ↓</button></div><p class="download-note">将下载 PNG、GIF；若浏览器拦截多文件，可使用 ZIP 后备。</p>
+  </section>
+</main><div id="toast" role="alert" aria-live="assertive"></div><script src="/app.js"></script></body></html>

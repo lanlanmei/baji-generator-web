@@ -1,0 +1,12 @@
+services:
+  baji-generator:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      BAJI_WORKERS: "1"
+      BAJI_JOB_TTL: "3600"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 4G

@@ -1,0 +1,10 @@
+.data/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.vendor/
+acceptance/
+acceptance-crop.png
+baji-generator-skill/examples/
+server.*.log

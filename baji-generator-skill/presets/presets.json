@@ -1,0 +1,6 @@
+{
+  "effects": ["glossy", "white-ceramic", "brushed-silver-glitter", "surface-holographic", "star-holographic", "matte-frosted", "fluffy-cookie"],
+  "rims": ["silver", "gold", "black"],
+  "backgrounds": {"white":"#ffffff","transparent":"#00000000","soft-black":"#25272b","light-gray":"#e9eaec","mist-pink":"#ead9dc","cream":"#eee5d2","sage":"#d8dfd1","gray-blue":"#d6dfe7","pale-yellow":"#eee7bf","soft-peach":"#ecd8c9","pale-purple":"#dfd8e8"},
+  "sizes": [1024, 2048, 4096], "default_seed": 42
+}

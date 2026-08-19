@@ -1,0 +1,4 @@
+interface:
+  display_name: "吧唧生成器"
+  short_description: "把用户图片制作成七种真实商品摄影质感的圆形吧唧效果图"
+  default_prompt: "Use $baji-generator to turn my image into a realistic button badge."

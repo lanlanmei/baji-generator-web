@@ -1,0 +1,14 @@
+newmtl front_art
+Kd 1.00 1.00 1.00
+Ks 0.32 0.32 0.32
+Ns 220
+
+newmtl rim_metal
+Kd 0.72 0.74 0.76
+Ks 0.68 0.68 0.68
+Ns 260
+
+newmtl back_metal
+Kd 0.64 0.67 0.70
+Ks 0.42 0.44 0.46
+Ns 120
